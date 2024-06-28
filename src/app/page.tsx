@@ -1,4 +1,5 @@
 import PublicLayout from "@/components/layout/PublicLayout";
+import About from "@/components/sections/Home/About/About";
 import SuccessWork from "@/components/sections/Home/SuccessWork/SuccessWork";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <PublicLayout>
         <SuccessWork />
+        <About />
       </PublicLayout>
     </main>
   );
