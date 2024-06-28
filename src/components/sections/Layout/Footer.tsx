@@ -1,222 +1,48 @@
-import { Link } from "@/lib/router-events";
-import Image from "next/image";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[rgba(0,0,0,255)] mt-16">
-        <div className="container px-5 mx-auto py-5 md:py-10">
-          {/* <!-- Grid --> */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div className="col-span-full lg:col-span-1">
-              <a
-                className="flex-none text-xl font-semibold text-white"
-                href="/"
-                aria-label="Brand"
-              >
-                <div className="flex-none justify-center items-center">
-                  <Image
-                    src="/imgs/car-rent.png"
-                    alt="car-rental-logo"
-                    width={45}
-                    height={45}
-                    className="text-white ms-10"
-                  />
+      <footer className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] mt-16">
+        <hr className="text-white" />
 
-                  <h1 className="text-xl font-sans md:text-2xl ms-2 font-semibold">
-                    Naimur Rahman
-                  </h1>
-                  <p className="text-sm font-medium justify-center items-center mt-5">
-                    An online marriage platform connects individuals seeking
-                    lifelong partnerships.
-                  </p>
-                </div>
-              </a>
-            </div>
-            {/* <!-- End Col --> */}
+        <div className="w-full flex flex-col md:flex-row py-16 px-8 md:px-10 gap-10 lg:gap-20 justify-between ">
+          <p className="text-lg text-white font-semibold ">
+            Address
+            <br />
+            Gazipur, Dhaka, Bangladesh
+          </p>
 
-            <div className="col-span-1">
-              <h4 className="font-semibold text-gray-100">Need Help?</h4>
-
-              <div className="mt-3 grid space-y-3">
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Member Login
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/#"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Sign Up
-                  </Link>
-                </p>
-
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Customer Support
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Car Search
-                  </Link>
-                </p>
-              </div>
-            </div>
-            {/* <!-- End Col --> */}
-
-            <div className="col-span-1">
-              <h4 className="font-semibold text-gray-100">Company</h4>
-
-              <div className="mt-3 grid space-y-3">
-                <p>
-                  <Link
-                    href="/about-us"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Reservation
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/about-us"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    About us
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/contact-us"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Contact us
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                    href="/"
-                  >
-                    Services
-                  </Link>{" "}
-                </p>
-              </div>
-            </div>
-            {/* <!-- End Col --> */}
-
-            <div className="col-span-1">
-              <h4 className="font-semibold text-gray-100">Privacy & You</h4>
-
-              <div className="mt-3 grid space-y-3">
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Terms of Use
-                  </Link>
-                </p>
-
-                <p>
-                  <Link
-                    href="/#"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Privacy Policy
-                  </Link>
-                </p>
-
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Be Safe Online
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Report Misuse
-                  </Link>
-                </p>
-              </div>
-            </div>
-            {/* <!-- End Col --> */}
-
-            <div className="col-span-1">
-              <h4 className="font-semibold text-gray-100">More</h4>
-
-              <div className="mt-3 grid space-y-3">
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Car Booking Center
-                  </Link>
-                </p>
-
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Rent Car Preview
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Site map
-                  </Link>
-                </p>
-                <p>
-                  <Link
-                    href="/"
-                    className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200"
-                  >
-                    Loaction Search
-                  </Link>
-                </p>
-              </div>
-            </div>
-            {/* <!-- End Col --> */}
-
-            {/* <!-- End Col --> */}
+          <div className="flex flex-col md:flex-row text-md gap-5 md:gap-20 text-white ">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
           </div>
-          {/* <!-- End Grid --> */}
 
-          <div className="mt-8 pt-5 border-t-2 border-gray-600 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
-            <div className="flex justify-between items-center">
-              <p className="text-sm text-gray-400">
-                © 2024 Car Renter. All rights reserved.
-              </p>
-            </div>
-            {/* <!-- End Col --> */}
-
-            <div>
-              <p className="text-gray-400">
-                Passionately created by rentcar.com org
-              </p>
-            </div>
+          <div className="flex flex-col gap-5 text-md text-white ">
+            <p>naimur2231@gmail.com</p>
+            <p>+8801983835309</p>
           </div>
+        </div>
+
+        <div className="flex flex-col gap-5 items-center justify-center pb-12">
+          <p className="text-white font-semibold tracking-wider">
+            Social Media
+          </p>
+
+          <div className="flex gap-10 text-white text-2xl mb-3">
+            <BsYoutube className="hover:scale-125" />
+            <BsFacebook className="hover:scale-125" />
+            <BsInstagram className="hover:scale-125" />
+            <BsLinkedin className="hover:scale-110" />
+            <AiFillTwitterCircle className="hover:scale-125" />
+          </div>
+
+          <p className="text-gray-400 text-md tracking-wider">
+            {" "}
+            Copyright © {new Date().getFullYear()} - All right reserved
+          </p>
         </div>
       </footer>
     </div>
