@@ -32,7 +32,9 @@ const Header: React.FC = () => {
   return (
     <div
       className={`w-full fixed top-0 z-50   ${
-        isTop ? "bg-primary bg-opacity-10" : "bg-white shadow-md"
+        isTop
+          ? "bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e] bg-opacity-10"
+          : "bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e] shadow-md"
       }`}
     >
       <div className=" h-full container px-5 mx-auto py-2 lg:py-5 flex items-center justify-between">
@@ -45,12 +47,12 @@ const Header: React.FC = () => {
               height={25}
               className="text-white w-[45px] h-[50px]"
             />
-            <h1 className="text-xl font-sans lg:text-2xl ms-2 font-semibold">
+            <h1 className="text-xl text-blue-500 font-sans lg:text-2xl ms-2 font-semibold">
               Naimur Rahman
             </h1>
           </Link>
         </div>
-        <div className="hidden lg:flex justify-center items-center gap-4">
+        <div className="hidden lg:flex justify-center items-center gap-5 text-white">
           {/* <Link href="/reservation" className="hover:underline font-semibold">
             Reservation
           </Link> */}
@@ -88,7 +90,7 @@ const Header: React.FC = () => {
         open={open}
         key={placement}
       >
-        <div className="flex flex-col gap-5 ">
+        <div className="flex flex-col gap-5 text-white">
           <Link href="/" className="hover:underline font-semibold text-black">
             Home
           </Link>
