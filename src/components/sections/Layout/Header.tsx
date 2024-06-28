@@ -33,11 +33,11 @@ const Header: React.FC = () => {
     <div
       className={`w-full fixed top-0 z-50   ${
         isTop
-          ? "bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e] bg-opacity-10"
+          ? " bg-opacity-10"
           : "bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e] shadow-md"
       }`}
     >
-      <div className=" h-full container px-5 mx-auto py-2 lg:py-5 flex items-center justify-between">
+      <div className=" h-full container px-5 lg:px-24 mx-auto py-2 lg:py-5 flex items-center justify-between">
         <div className="flex gap-10 items-center justify-center ">
           <Link href="/" className="flex justify-center items-center">
             <Image
@@ -79,7 +79,10 @@ const Header: React.FC = () => {
             </Button>
           </div>
           <div className="lg:hidden flex justify-center items-center ">
-            <MdMenu className="text-3xl cursor-pointer" onClick={showDrawer} />
+            <MdMenu
+              className="text-3xl font-medium cursor-pointer text-white"
+              onClick={showDrawer}
+            />
           </div>
         </div>
       </div>
@@ -112,9 +115,7 @@ const Header: React.FC = () => {
           >
             Contacts
           </Link>
-          <div className="flex gap-5 items-center justify-center font-semibold">
-            <HeaderDropdown />
-          </div>
+          s
           <div className="flex items-center justify-center font-semibold">
             <Button size="large" type={!isTop ? "primary" : undefined}>
               Hire Me
