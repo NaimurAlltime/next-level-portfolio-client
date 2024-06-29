@@ -100,3 +100,28 @@ export const softskills = [
   "Problem solving",
   "Open-mindedness",
 ];
+
+export const blogs = [
+  {
+    _id: 1,
+    title: "Transforming Software Engineering with AI: The Future is Now",
+    img: "/imgs/ai1.jpg",
+    description:
+      "Explore how artificial intelligence is revolutionizing software engineering, from automating mundane tasks to enhancing the capabilities of development tools. Discover the future of AI-driven software development and what it means for engineers and businesses alike.s",
+  },
+  {
+    _id: 2,
+    title: "Why TypeScript is a Game-Changer for JavaScript Developers",
+    img: "/imgs/ts.jpg",
+    description:
+      "TypeScript is rapidly becoming the go-to language for JavaScript developers. Learn why TypeScript is considered a game-changer and how it helps in catching errors early, providing better tooling, and making code more readable and maintainable.",
+  },
+  {
+    _id: 3,
+    title:
+      "Learn Fast, Stay Ahead: Effective Methods to Grasp New Technologies",
+    img: "/imgs/e-learn.jpg",
+    description:
+      "Stay ahead of the curve with our guide to effective learning methods for new technologies. From leveraging online resources to hands-on practice, discover how you can quickly acquire and retain the skills needed to thrive in tech.",
+  },
+];
