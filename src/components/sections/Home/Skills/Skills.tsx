@@ -7,7 +7,7 @@ const Skills = () => {
       <h4 className="text-3xl font-bold text-white mb-10 text-center">
         Technical Skills
       </h4>
-      s
+
       <div className="w-full flex flex-wrap gap-10 items-center justify-center">
         {skills.map((skill, index) => (
           <div

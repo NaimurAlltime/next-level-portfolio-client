@@ -4,7 +4,7 @@ import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] mt-16">
+      <footer className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c] lg:px-24">
         <hr className="text-white" />
 
         <div className="w-full flex flex-col md:flex-row py-16 px-8 md:px-10 gap-10 lg:gap-20 justify-between ">
