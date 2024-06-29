@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "project_name": "Apartment Villa",
+      "image": "/projects/aprtment-vila.png",
+      "details": "Apartment Villa websites that audiences, boost businesses, and lead with innovation in the dynamic landscape of web design and development"
+    },
+    {
+      "id": 2,
+      "project_name": "E-commerce Website",
+      "image": "/projects/e-commerce.webp",
+      "details": "E-commerce Website is a software solutions tailored to your needs, empowering businesses to thrive in the digital age with innovation and excellence"
+    },
+    {
+      "id": 3,
+      "project_name": "Hotel menegement",
+      "image": "/projects/hr-management.png",
+      "details": "Hotel menegement software ideas into user-friendly mobile apps, bridging the digital gap and revolutionizing industries with our app development expertise and innovation"
+    },
+    {
+      "id": 4,
+      "project_name": "Car Rent",
+      "image": "/projects/car-rent.png",
+      "details": "Car Rent online visibility and driving organic growth through data-driven strategies, our SEO services empower businesses to dominate search engine rankings"
+    },
+    {
+      "id": 5,
+      "project_name": "Property Expert",
+      "image": "/projects/property-expert.png",
+      "details": "Property Expert software glitches and issues, our bug fixing services ensure smooth, error-free operations, preserving your digital solutions' integrity and reliability"
+    },
+    {
+      "id": 6,
+      "project_name": "Car Shop",
+      "image": "/projects/car-shop.png",
+      "details": "Car Shop software ideas into user-friendly mobile apps, bridging the digital intelligent, data-driven decisions"
+    }
+  ]
