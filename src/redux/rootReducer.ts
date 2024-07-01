@@ -1,10 +1,5 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import { baseApi } from "./baseApi";
-import { adminReducer } from "./features/adminDashboard/adminDashboard.slice";
-import { searchboxReducer } from "./features/searchbox/searchboxSlice";
+import { baseApi } from "./api/baseApi";
 
-export const rootReducer = combineReducers({
+export const reducer = {
   [baseApi.reducerPath]: baseApi.reducer,
-  admin: adminReducer,
-  searchBox: searchboxReducer,
-});
+};

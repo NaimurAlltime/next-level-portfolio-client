@@ -1,1 +1,0 @@
-export const login_credential : string = "Login-With-Credentials"

@@ -1,7 +1,19 @@
-export interface IMeta {
-  limit: number;
+import { USER_ROLE } from "@/contants/role";
+import { SvgIconTypeMap } from "@mui/material";
+import { OverridableComponent } from "@mui/material/OverridableComponent";
+
+export type IMeta = {
   page: number;
+  limit: number;
   total: number;
+};
+
+export interface DrawerItem {
+  title: string;
+  path: string;
+  parentPath?: string;
+  icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string };
+  child?: DrawerItem[];
 }
 
 export type ResponseSuccessType = {
@@ -9,27 +21,42 @@ export type ResponseSuccessType = {
   meta?: IMeta;
 };
 
-export interface IQueryFeatures {
-  page?: number | string;
-  limit?: number | string;
-  fields?: string;
-  populate?: string;
-  sort?: string;
-  searchKey?: string;
-}
-
-export type IQuery = IQueryFeatures & { [key: string]: any };
-
 export type IGenericErrorResponse = {
-  error: IGenericErrorMessage;
+  statusCode: number;
+  message: string;
+  errorMessages: IGenericErrorMessage[];
 };
 
 export type IGenericErrorMessage = {
-  path?: string | number;
+  path: string | number;
   message: string;
 };
 
-export interface ILoginCredentials {
+export type UserRole = keyof typeof USER_ROLE;
+
+export type TUser = {
+  id: string;
+  name: string;
+  username: string;
   email: string;
-  password: string;
-}
+  status: string;
+  bloodType: string;
+  location: string;
+  dateOfBirth: string;
+  lastDonationDate: string;
+  availability: boolean;
+  createdAt: string;
+  updatedAt: string;
+  userProfile: UserProfile;
+};
+
+export type UserProfile = {
+  id: string;
+  userId: string;
+  bio?: string;
+  profilePicture?: string;
+  dateOfBirth: string;
+  lastDonationDate: string;
+  createdAt: string;
+  updatedAt: string;
+};

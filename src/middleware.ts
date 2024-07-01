@@ -1,23 +1,43 @@
-import { getToken } from "next-auth/jwt";
-import { NextRequest, NextResponse } from "next/server";
-import { envConfig } from "./helpers/config/envConfig";
+import { jwtDecode } from "jwt-decode";
+import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-// This function can be marked `async` if using `await` inside
-export async function middleware(request: NextRequest) {
+const commonPrivateRoutes = [
+  "/dashboard",
+  "/dashboard/profile",
+  "/blood-request",
+];
+
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const session: any = await getToken({ req: request, secret: envConfig.jwt.secret });
-  
-  if (!session) {
-    return NextResponse.redirect(new URL("/admin-login", request.nextUrl));
+  const token = cookies().get("token")?.value;
+
+  if (
+    token &&
+    (commonPrivateRoutes.includes(pathname) ||
+      commonPrivateRoutes.some((route) => pathname.startsWith(route)))
+  ) {
+    return NextResponse.next();
   }
-  if (session && (pathname === "/admin" || pathname === "/admin/login")) {
-    return NextResponse.redirect(new URL("/admin/profile", request.nextUrl));
+
+  if (!token) {
+    return NextResponse.redirect(new URL("/login", request.url));
   }
-  return NextResponse.next();
+
+  const decodedToken = jwtDecode(token) as { role: string };
+
+  if (decodedToken?.role === "ADMIN" && pathname === "/dashboard/admin") {
+    return NextResponse.next();
+  }
+
+  if (decodedToken?.role === "USER" && pathname === "/dashboard/user") {
+    return NextResponse.next();
+  }
+
+  return NextResponse.redirect(new URL("/login", request.url));
 }
 
-// This default export is required
-
 export const config = {
-  matcher: ["/admin", "/admin/:path*"],
+  matcher: ["/dashboard/:page*", "/blood-request/:page*"],
 };
