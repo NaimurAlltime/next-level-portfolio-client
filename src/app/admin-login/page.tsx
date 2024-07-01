@@ -19,7 +19,7 @@ const LoginPage = () => {
   const [error, setError] = useState("");
 
   const defaultValues = {
-    usernameOrEmail: "",
+    email: "",
     password: "",
   };
 
@@ -28,9 +28,9 @@ const LoginPage = () => {
       const res = await userLogin(values);
 
       // Check if res.data and res.data.token exist
-      if (res?.data?.token) {
+      if (res?.data?.accessToken) {
         toast.success(res?.message);
-        storeUserInfo({ token: res.data.token });
+        storeUserInfo({ token: res.data.accessToken });
         // router.push("/dashboard");
         router.refresh();
       } else {
@@ -92,12 +92,7 @@ const LoginPage = () => {
             >
               <Grid container spacing={2} my={1}>
                 <Grid item xs={12} md={6}>
-                  <REInput
-                    name="usernameOrEmail"
-                    label="Username OR Email"
-                    type="text"
-                    fullWidth
-                  />
+                  <REInput name="email" label="Email" type="text" fullWidth />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <REInput
