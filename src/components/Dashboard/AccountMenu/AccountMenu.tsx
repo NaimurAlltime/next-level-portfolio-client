@@ -15,7 +15,6 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import { keyframes } from "@emotion/react";
 import { getUserInfo, removeUser } from "@/services/auth.services";
-import { useGetSingleUserQuery } from "@/redux/api/authApi";
 import { logout } from "@/services/actions/logout";
 
 const pulse = keyframes`
@@ -61,9 +60,6 @@ export default function AccountMenu({ color }: { color: string }) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const router = useRouter();
-
-  const { data } = useGetSingleUserQuery({});
-  // console.log(data);
 
   const [userRole, setUserRole] = React.useState("");
   React.useEffect(() => {
@@ -113,46 +109,27 @@ export default function AccountMenu({ color }: { color: string }) {
           }}
         >
           <IconButton onClick={handleClick} sx={{ p: 0 }}>
-            {data?.userProfile?.profilePhoto ? (
-              <Box
-                sx={{
-                  "&::after": {
-                    content: '""',
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    borderRadius: "50%",
-                    animation: `${pulse} 2s infinite`,
-                  },
-                }}
-              >
-                <Avatar alt={data.name} src={data?.userProfile?.profilePhoto} />
-              </Box>
-            ) : (
-              <Box
-                sx={{
-                  border: `3px solid white`,
+            <Box
+              sx={{
+                border: `3px solid white`,
+                borderRadius: "50%",
+                padding: "6px 6px 8px 10px",
+                display: "inline-block",
+                position: "relative",
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
                   borderRadius: "50%",
-                  padding: "6px 6px 8px 10px",
-                  display: "inline-block",
-                  position: "relative",
-                  "&::after": {
-                    content: '""',
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    borderRadius: "50%",
-                    animation: `${pulse} 2s infinite`,
-                  },
-                }}
-              >
-                <Image alt="Remy Sharp" src={userLogo} height={25} width={25} />
-              </Box>
-            )}
+                  animation: `${pulse} 2s infinite`,
+                },
+              }}
+            >
+              <Image alt="Remy Sharp" src={userLogo} height={25} width={25} />
+            </Box>
           </IconButton>
         </Tooltip>
       </Box>

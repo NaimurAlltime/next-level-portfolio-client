@@ -1,5 +1,5 @@
 import { USER_ROLE } from "@/contants/role";
-import { DrawerItem, UserRole } from "@/types";
+import { DrawerItem } from "@/types";
 
 //icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -9,9 +9,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 import BloodtypeIcon from "@mui/icons-material/Bloodtype";
 
-export const drawerItems = (role: UserRole): DrawerItem[] => {
-  const roleMenus: DrawerItem[] = [];
-
+export const drawerItems = (): DrawerItem[] => {
   const defaultMenus = [
     {
       title: "Dashboard",
@@ -20,8 +18,8 @@ export const drawerItems = (role: UserRole): DrawerItem[] => {
     },
 
     {
-      title: "Skill",
-      path: `/skill`,
+      title: "Skills",
+      path: `/skills`,
       icon: DashboardIcon,
     },
 
@@ -44,8 +42,8 @@ export const drawerItems = (role: UserRole): DrawerItem[] => {
     },
 
     {
-      title: "Blog",
-      path: `/blog`,
+      title: "Blogs",
+      path: `/blogs`,
       icon: DashboardIcon,
     },
 

@@ -13,7 +13,6 @@ import SideBar from "../SideBar/SideBar";
 import { Avatar, Badge, Stack } from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountMenu from "../AccountMenu/AccountMenu";
-import { useGetSingleUserQuery } from "@/redux/api/authApi";
 
 const drawerWidth = 240;
 
@@ -40,7 +39,6 @@ export default function DashboardDrawer({
     }
   };
 
-  const { data } = useGetSingleUserQuery({});
   // console.log(data);
 
   return (
@@ -84,7 +82,7 @@ export default function DashboardDrawer({
                 component="div"
                 sx={{ color: "rgba(11, 17, 52, 0.6)" }}
               >
-                Hi, {data?.name},
+                Hi,
               </Typography>
               <Typography
                 variant="h6"
@@ -92,7 +90,7 @@ export default function DashboardDrawer({
                 component="div"
                 sx={{ color: "primary.main" }}
               >
-                Welcome to Blood Donation Dashboard!
+                Welcome to My Next Level Portfolio Dashboard!
               </Typography>
             </Box>
             <Stack direction="row" gap={3}>

@@ -32,31 +32,55 @@ export type IGenericErrorMessage = {
   message: string;
 };
 
-export type UserRole = keyof typeof USER_ROLE;
-
-export type TUser = {
-  id: string;
+export interface ISkill {
+  _id: string;
   name: string;
-  username: string;
-  email: string;
-  status: string;
-  bloodType: string;
-  location: string;
-  dateOfBirth: string;
-  lastDonationDate: string;
-  availability: boolean;
-  createdAt: string;
-  updatedAt: string;
-  userProfile: UserProfile;
-};
+  percentage: string;
+  icon: string;
+}
 
-export type UserProfile = {
-  id: string;
-  userId: string;
-  bio?: string;
-  profilePicture?: string;
-  dateOfBirth: string;
-  lastDonationDate: string;
-  createdAt: string;
-  updatedAt: string;
-};
+export interface IEducation {
+  _id: string;
+  institute: string;
+  certificate: string;
+  startDate: Date;
+  endDate: Date;
+}
+
+export interface IExperience {
+  _id: string;
+  title: string;
+  organization: string;
+  link: string;
+  responsibilities: string[];
+  startDate: Date;
+  endDate: Date;
+}
+
+export interface IProject {
+  _id: string;
+  name: string;
+  description: string;
+  category: IProjectCategory;
+  featured: boolean;
+  features: string[];
+  technologies: ISkill[];
+  cover: string;
+  repositoryLink: {
+    source_code: string;
+    client_side_code: string;
+    server_side_code: string;
+  };
+  liveSiteLink: string;
+}
+
+export type IProjectCategory = "Frontend" | "Backend" | "Full-stack";
+
+export interface IBlog {
+  _id: string;
+  title: string;
+  text: string;
+  cover: string;
+  createdAt: Date;
+  updatedAt: Date;
+}

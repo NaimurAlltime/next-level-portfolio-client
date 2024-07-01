@@ -1,8 +1,10 @@
 export const tagTypes = {
-  user: "user",
-  donor: "donor",
-  request: "request",
-  bloodRequest: "bloodRequest",
+  skill: "SKILL",
+  education: "EDUCATION",
+  experience: "EXPERIENCE",
+  project: "PROJECT",
+  profile: "PROFILE",
+  blog: "BLOG",
 };
 
 export const tagTypeList = Object.values(tagTypes);

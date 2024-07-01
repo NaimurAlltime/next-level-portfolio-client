@@ -6,7 +6,6 @@ import { getUserInfo } from "@/services/auth.services";
 import { useEffect, useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { drawerItems } from "@/utils/drawerItems";
-import { UserRole } from "@/types";
 
 const SideBar = () => {
   const [userRole, setUserRole] = useState("");
@@ -35,7 +34,7 @@ const SideBar = () => {
         </h2>
       </Stack>
       <List>
-        {drawerItems(userRole as UserRole).map((item, index) => (
+        {drawerItems().map((item, index) => (
           <SidebarItem key={index} item={item} />
         ))}
       </List>
