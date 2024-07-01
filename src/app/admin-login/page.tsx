@@ -69,16 +69,11 @@ const LoginPage = () => {
             }}
           >
             <Box>
-              <Image
-                src={assets.images.logo}
-                width={120}
-                height={120}
-                alt="logo"
-              />
+              <Image src="/imgs/logo.png" width={90} height={80} alt="logo" />
             </Box>
             <Box>
               <Typography variant="h6" fontWeight={600}>
-                Login Form
+                Admin Login Form
               </Typography>
             </Box>
           </Stack>
@@ -127,14 +122,6 @@ const LoginPage = () => {
               >
                 Login
               </Button>
-              <Typography component="p" fontWeight={300}>
-                Don&apos;t have an account?{" "}
-                <Link href="/register" className="text-blue-500">
-                  <Box component="span" color="primary.main">
-                    Create an account
-                  </Box>
-                </Link>
-              </Typography>
             </REForm>
           </Box>
         </Box>
