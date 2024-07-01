@@ -14,66 +14,47 @@ export const drawerItems = (role: UserRole): DrawerItem[] => {
 
   const defaultMenus = [
     {
+      title: "Dashboard",
+      path: `/dashboard`,
+      icon: DashboardIcon,
+    },
+
+    {
+      title: "Skill",
+      path: `/skill`,
+      icon: DashboardIcon,
+    },
+
+    {
+      title: "Educations",
+      path: `/educations`,
+      icon: DashboardIcon,
+    },
+
+    {
+      title: "Experiences",
+      path: `/experiences`,
+      icon: DashboardIcon,
+    },
+
+    {
+      title: "Projects",
+      path: `/projects`,
+      icon: DashboardIcon,
+    },
+
+    {
+      title: "Blog",
+      path: `/blog`,
+      icon: DashboardIcon,
+    },
+
+    {
       title: "My Profile",
       path: "/profile",
       icon: PersonIcon,
     },
-    {
-      title: "Change Password",
-      path: `change-password`,
-      icon: KeyIcon,
-    },
   ];
 
-  switch (role) {
-    case USER_ROLE.ADMIN:
-      roleMenus.push(
-        {
-          title: "Dashboard",
-          path: `${role}`,
-          icon: DashboardIcon,
-        },
-        {
-          title: "Manage Users",
-          path: `${role}/manage-users`,
-          icon: GroupIcon,
-        },
-        {
-          title: "My Blood Request",
-          path: `${role}/my-blood-request`,
-          icon: PersonSearchIcon,
-        },
-        {
-          title: "Requests for Blood to Me",
-          path: `${role}/request-blood-me`,
-          icon: BloodtypeIcon,
-        }
-      );
-      break;
-
-    case USER_ROLE.USER:
-      roleMenus.push(
-        {
-          title: "Dashboard",
-          path: `${role}`,
-          icon: DashboardIcon,
-        },
-        {
-          title: "My Blood Request",
-          path: `${role}/my-blood-request`,
-          icon: PersonSearchIcon,
-        },
-        {
-          title: "Requests for Blood to Me",
-          path: `${role}/request-blood-me`,
-          icon: BloodtypeIcon,
-        }
-      );
-      break;
-
-    default:
-      break;
-  }
-
-  return [...roleMenus, ...defaultMenus];
+  return [...defaultMenus];
 };

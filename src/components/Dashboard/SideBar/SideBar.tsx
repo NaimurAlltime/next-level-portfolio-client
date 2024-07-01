@@ -30,7 +30,9 @@ const SideBar = () => {
         component={Link}
         href="/"
       >
-        <Image src={assets.images.logo} width={150} height={130} alt="logo" />
+        <h2 className="text-orange-500 font-semibold text-2xl">
+          Naimur Rahman
+        </h2>
       </Stack>
       <List>
         {drawerItems(userRole as UserRole).map((item, index) => (
