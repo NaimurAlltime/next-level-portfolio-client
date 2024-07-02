@@ -1,4 +1,4 @@
-const monthNames = [
+const monthArray = [
   "January",
   "February",
   "March",
@@ -13,28 +13,16 @@ const monthNames = [
   "December",
 ];
 
-function stringToMonth(inputDate: string) {
-  if (!inputDate) return "";
+const dateFormatter = (startDate: Date, endDate: Date) => {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
 
-  const date = new Date(inputDate);
+  const startMonth = monthArray[start.getMonth()];
+  const startYear = start.getFullYear();
+  const endMonth = monthArray[end.getMonth()];
+  const endYear = end.getFullYear();
 
-  const day = date.getDate();
-  const month = date.getMonth();
-  const year = date.getFullYear();
-
-  return `${day} ${monthNames[month]}, ${year}`;
-}
-
-const dateToString = (inputDate: string) => {
-  const date = new Date(inputDate);
-
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-
-  return `${year}-${month <= 9 ? "0" + month : month}-${day}`;
+  return `${startMonth}, ${startYear} - ${endMonth}, ${endYear}`;
 };
-
-const dateFormatter = { stringToMonth, dateToString };
 
 export default dateFormatter;

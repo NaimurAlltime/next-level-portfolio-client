@@ -5,7 +5,7 @@ import { tagTypeList } from "../tag-types";
 const baseQuery = fetchBaseQuery({
   baseUrl: config.baseUrl,
   prepareHeaders: (headers) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("accessToken");
 
     if (token) {
       headers.set("Authorization", `Bearer ${token}`);
