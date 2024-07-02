@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
     <div
       className={`w-full fixed top-0 z-50   ${
         isTop
-          ? " bg-opacity-10"
+          ? " bg-opacity-10 "
           : "bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e] shadow-md"
       }`}
     >
