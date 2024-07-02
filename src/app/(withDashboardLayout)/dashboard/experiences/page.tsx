@@ -177,10 +177,14 @@ const ExperiencesPage = () => {
             >
               {isLoading ? (
                 <CircularProgress
-                  sx={{ width: "25px !important", height: "25px !important" }}
+                  sx={{
+                    width: "25px !important",
+                    height: "25px !important",
+                    color: "white",
+                  }}
                 />
               ) : (
-                "Add"
+                "Add Experience"
               )}
             </Button>
           </REForm>

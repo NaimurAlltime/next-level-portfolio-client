@@ -10,7 +10,7 @@ interface ITextField {
   required?: boolean;
   fullWidth?: boolean;
   sx?: SxProps;
-  items: string[];
+  items: { name: string; value: string }[];
 }
 
 const RESelectField = ({
@@ -37,6 +37,7 @@ const RESelectField = ({
           }}
           size={size}
           select
+          color="secondary"
           label={label}
           required={required}
           fullWidth={fullWidth}
@@ -45,9 +46,9 @@ const RESelectField = ({
             isError ? (formState.errors[name]?.message as string) : ""
           }
         >
-          {items.map((name) => (
-            <MenuItem key={name} value={name}>
-              {name}
+          {items.map((item) => (
+            <MenuItem key={item.name} value={item.value}>
+              {item.name}
             </MenuItem>
           ))}
         </TextField>

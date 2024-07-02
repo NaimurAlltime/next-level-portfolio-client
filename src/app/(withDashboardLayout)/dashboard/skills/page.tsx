@@ -127,6 +127,7 @@ const TechnologiesPage = () => {
                       sx={{
                         width: "25px !important",
                         height: "25px !important",
+                        color: "white",
                       }}
                     />
                   ) : (

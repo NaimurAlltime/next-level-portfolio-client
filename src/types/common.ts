@@ -35,7 +35,7 @@ export type IGenericErrorMessage = {
 export interface ISkill {
   _id: string;
   name: string;
-  percentage: string;
+  percentage?: string;
   icon: string;
 }
 
