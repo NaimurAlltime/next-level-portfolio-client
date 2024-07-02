@@ -1,26 +1,40 @@
-import { skills, softskills } from "@/utils/data";
+"use client";
+import { softskills } from "@/utils/data";
 import { BsCheck2All } from "react-icons/bs";
+import Loader from "../../Loader";
+import { useGetSkillQuery } from "@/redux/api/skill";
+import Image from "next/image";
 
 const Skills = () => {
+  const { data, isLoading } = useGetSkillQuery(undefined);
+
+  if (isLoading) return <Loader />;
+
   return (
-    <div className="w-full flex flex-col py-20 px-0 lg:px-5 2xl:px-32 lg:py-20 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]">
+    <div className="w-full flex flex-col py-20 px-0 lg:px-5 lg:py-20 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]">
       <h4 className="text-3xl font-bold text-white mb-10 text-center">
         Technical Skills
       </h4>
 
       <div className="w-full flex flex-wrap gap-10 items-center justify-center">
-        {skills.map((skill, index) => (
+        {data?.data?.map((skill: any) => (
           <div
             data-aos="zoom-in-down"
             data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
-            key={index}
+            key={skill._id}
             className="flex gap-4 shadow-lg py-2 px-6 bg-[#04133e] rounded-full items-center hover:animate-bounce ease-in-out duration-300"
           >
             <div className="w-10 h-10">
-              <img src={skill.icon} className="w-full h-full rounded-full" />
+              <Image
+                width={25}
+                height={25}
+                src={skill.icon}
+                className="w-full h-full rounded-full"
+                alt={skill.name}
+              />
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center justify-between">
@@ -28,13 +42,13 @@ const Skills = () => {
                   {skill.name}
                 </p>
                 <p className="text-md font-semibold text-white">
-                  {skill.value + "%"}
+                  {skill.percentage + "%"}
                 </p>
               </div>
               <div className="w-[200px] h-[10px] bg-slate-800 rounded-lg mb-1">
                 <div
                   className="bg-neutral-300 h-full"
-                  style={{ width: skill.value + "%" }}
+                  style={{ width: skill.percentage + "%" }}
                 />
               </div>
             </div>
