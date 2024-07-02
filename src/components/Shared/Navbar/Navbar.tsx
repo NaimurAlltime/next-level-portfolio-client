@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
 
                 <MenuItem
                   component={Link}
-                  href="/Projects"
+                  href="/projects"
                   onClick={handleMenuClose}
                 >
                   Projects
@@ -120,10 +120,18 @@ const Navbar: React.FC = () => {
 
                 <MenuItem
                   component={Link}
-                  href="/Projects"
+                  href="/contacts"
                   onClick={handleMenuClose}
                 >
                   Contacts
+                </MenuItem>
+
+                <MenuItem
+                  component={Link}
+                  href="/blogs"
+                  onClick={handleMenuClose}
+                >
+                  Blogs
                 </MenuItem>
 
                 <MenuItem onClick={handleMenuClose}>
@@ -182,10 +190,17 @@ const Navbar: React.FC = () => {
 
                   <Typography
                     component={Link}
-                    href="/projects"
+                    href="/contacts"
                     sx={{ textDecoration: "none", color: "inherit" }}
                   >
                     Contacts
+                  </Typography>
+                  <Typography
+                    component={Link}
+                    href="/blogs"
+                    sx={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Blogs
                   </Typography>
                 </Stack>
               </Grid>

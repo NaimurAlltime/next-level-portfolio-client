@@ -5,15 +5,13 @@ import Slider from "react-slick";
 import ProjectCard from "./ProjectCard"; // Ensure this path is correct
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useGetAllProjectsQuery } from "@/redux/api/project.api";
+import Loader from "../../Loader";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
+  const { data, isLoading } = useGetAllProjectsQuery(undefined);
 
-  useEffect(() => {
-    fetch("/projects.json") // Make sure this path is correct
-      .then((res) => res.json())
-      .then((data) => setProjects(data));
-  }, []);
+  if (isLoading) return <Loader />;
 
   const settings = {
     infinite: true,
@@ -57,7 +55,7 @@ const Projects = () => {
         </h2>
       </div>
       <Slider {...settings}>
-        {projects.map((project: any) => (
+        {data?.data?.map((project: any) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </Slider>

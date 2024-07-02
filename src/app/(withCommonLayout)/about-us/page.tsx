@@ -1,9 +1,9 @@
-import AboutUs from "@/components/UI/HomePage/AboutUs/AboutUs";
+import About from "@/components/UI/HomePage/About/About";
 
 const AboutUsPage = () => {
   return (
     <>
-      <AboutUs />
+      <About />
     </>
   );
 };
