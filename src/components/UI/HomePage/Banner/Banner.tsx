@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="w-full flex items-center flex-col lg:flex-row md:px-10 gap-3 2xl:gap-20 px-5 lg:px-12 2xl:px-32 py-20 lg:py-24 ">
+    <div className="w-full flex items-center flex-col lg:flex-row md:px-10 gap-3 2xl:gap-20 px-5 lg:px-12 2xl:px-32 py-20 lg:py-24 bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e]">
       <div
         className="flex flex-col mb-20 lg:mb-0"
         data-aos="fade-down"

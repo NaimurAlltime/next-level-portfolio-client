@@ -38,17 +38,16 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full pt-7 px-8 md:px-10 lg:px-32 gap-10 lg:gap-20 lg:py-20 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#061130]">
+    <div className="w-full px-8 md:px-10 lg:px-32 gap-10 lg:gap-20 pt-20 md:pt-0 lg:py-20 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#061130]">
       <h2 className="text-3xl text-center font-bold text-white">Contact Me</h2>
       <div
         data-aos="zoom-in-down"
         data-aos-offset="200"
         data-aos-delay="50"
-        data-aos-duration="1000"
         data-aos-easing="ease-in-out"
-        className="xl:mt-5 w-full items-center flex xl:flex-row flex-col-reverse md:gap-10 overflow-hidden"
+        className="xl:mt-5 w-full items-center flex xl:flex-row flex-col-reverse md:gap-10 overflow-hidden mt-2"
       >
-        <div className="md:w-1/2 bg-black-100 rounded-2xl">
+        <div className="md:w-1/2 bg-black-100 rounded-2xl ">
           <form
             ref={form}
             onSubmit={sendEmail}

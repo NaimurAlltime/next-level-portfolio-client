@@ -4,19 +4,24 @@ import Contact from "@/components/UI/HomePage/Contact/Contact";
 import Projects from "@/components/UI/HomePage/Project/Project";
 import Skills from "@/components/UI/HomePage/Skills/Skills";
 import SuccessWork from "@/components/UI/HomePage/SuccessWork/SuccessWork";
-import CommonLayout from "./layout";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+import Banner from "@/components/UI/HomePage/Banner/Banner";
 
 const HomePage = () => {
+  // useEffect(() => {
+  //   AOS.init({ duration: 1000 });
+  // }, []);
+
   return (
     <>
-      <CommonLayout showBanner={true}>
-        <SuccessWork />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Blogs />
-      </CommonLayout>
+      <Banner />
+      <SuccessWork />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Blogs />
     </>
   );
 };

@@ -21,7 +21,7 @@ const ProjectDetailsPage = () => {
   const project: IProject = data?.data;
 
   return (
-    <div className="mx-3 md:mx-12 lg:mx-32 py-7">
+    <div className="px-4 md:px-12 lg:px-28 py-16 sm:px-6 lg:py-24 mx-auto bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]">
       <Stack key={project._id} boxShadow={24} p={4}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
@@ -38,7 +38,7 @@ const ProjectDetailsPage = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Stack justifyContent="space-between" height="100%">
+            <Stack justifyContent="space-between" height="100%" color={"white"}>
               <Box>
                 <Typography variant="h4" lineHeight={1}>
                   {project.name}
@@ -50,7 +50,7 @@ const ProjectDetailsPage = () => {
                   Features:{" "}
                 </Typography>
                 {project.features.map((feature) => (
-                  <Typography key={feature} pl={1}>
+                  <Typography key={feature} pl={1} color={"lightgray"}>
                     <CircleIcon sx={{ fontSize: "10px", mx: "2px" }} />
                     {feature}
                   </Typography>

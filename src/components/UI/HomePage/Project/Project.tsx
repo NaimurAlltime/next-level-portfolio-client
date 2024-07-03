@@ -48,7 +48,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="px-4 md:px-12 lg:px-28 py-4 sm:px-6 lg:py-24 mx-auto bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]">
+    <div className="px-4 md:px-12 lg:px-28 py-20 sm:px-6 lg:py-24 mx-auto bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]">
       <div className="max-w-2xl text-center mx-auto mb-10 lg:mb-14">
         <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
           Best Projects
