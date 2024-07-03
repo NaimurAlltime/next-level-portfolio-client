@@ -7,6 +7,7 @@ import SuccessWork from "@/components/UI/HomePage/SuccessWork/SuccessWork";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 import Banner from "@/components/UI/HomePage/Banner/Banner";
+import Education from "@/components/UI/HomePage/Education/Education";
 
 const HomePage = () => {
   // useEffect(() => {
@@ -18,6 +19,7 @@ const HomePage = () => {
       <Banner />
       <SuccessWork />
       <About />
+      <Education />
       <Skills />
       <Projects />
       <Contact />
