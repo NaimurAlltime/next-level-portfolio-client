@@ -13,7 +13,7 @@ export const drawerItems = (): DrawerItem[] => {
   const defaultMenus = [
     {
       title: "Dashboard",
-      path: `/dashboard`,
+      path: `/`,
       icon: DashboardIcon,
     },
 

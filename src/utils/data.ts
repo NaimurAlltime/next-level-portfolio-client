@@ -23,20 +23,20 @@ export const tools = [
     icon: "/assets/mongodb.svg",
   },
   {
-    name: "Express",
+    name: "ExpressJS",
     icon: "/assets/express.svg",
   },
   {
-    name: "React",
+    name: "ReactJS",
     icon: "/assets/reactjs.svg",
   },
   {
-    name: "NodeJs",
+    name: "NodeJS",
     icon: "/assets/nodejs.svg",
   },
   {
-    name: "Firebase",
-    icon: "/assets/firebase.svg",
+    name: "NextJS",
+    icon: "/assets/nextjs2.svg",
   },
 ];
 

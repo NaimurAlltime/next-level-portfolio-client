@@ -8,6 +8,7 @@ import SuccessWork from "@/components/UI/HomePage/SuccessWork/SuccessWork";
 // import "aos/dist/aos.css";
 import Banner from "@/components/UI/HomePage/Banner/Banner";
 import Education from "@/components/UI/HomePage/Education/Education";
+import Experience from "@/components/UI/HomePage/Experience/Experience";
 
 const HomePage = () => {
   // useEffect(() => {
@@ -20,6 +21,7 @@ const HomePage = () => {
       <SuccessWork />
       <About />
       <Education />
+      <Experience />
       <Skills />
       <Projects />
       <Contact />
