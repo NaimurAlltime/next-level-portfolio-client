@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
 
@@ -15,9 +16,10 @@ const Footer = () => {
           </p>
 
           <div className="flex flex-col md:flex-row text-md gap-5 md:gap-20 text-white ">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <Link href="/">Home</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/about-us">About</Link>
+            <Link href="/blogs">Blogs</Link>
           </div>
 
           <div className="flex flex-col gap-5 text-md text-white ">
@@ -32,11 +34,20 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-10 text-white text-2xl mb-3">
-            <BsYoutube className="hover:scale-125" />
-            <BsFacebook className="hover:scale-125" />
-            <BsInstagram className="hover:scale-125" />
-            <BsLinkedin className="hover:scale-110" />
-            <AiFillTwitterCircle className="hover:scale-125" />
+            {/* <BsYoutube className="hover:scale-125" /> */}
+            <Link href="https://www.facebook.com/naimur22315">
+              <BsFacebook className="hover:scale-125" />
+            </Link>
+            {/* <Link href="https://www.facebook.com/naimur22315">
+              <BsInstagram className="hover:scale-125" />
+            </Link> */}
+            <Link href="https://www.linkedin.com/in/naimur22315/">
+              <BsLinkedin className="hover:scale-110" />
+            </Link>
+
+            <Link href="https://x.com/naimur22315">
+              <AiFillTwitterCircle className="hover:scale-125" />
+            </Link>
           </div>
 
           <p className="text-gray-400 text-md tracking-wider">

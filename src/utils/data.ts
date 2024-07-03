@@ -1,15 +1,15 @@
 export const projectStats = [
   {
     name: "Total Projects",
-    value: "100+",
+    value: "300+",
   },
   {
     name: "Website Design",
-    value: "50+",
+    value: "120+",
   },
   {
     name: "Website Development",
-    value: "45+",
+    value: "145+",
   },
   {
     name: "Clients worldwide",
