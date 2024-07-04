@@ -1,13 +1,13 @@
-import { USER_ROLE } from "@/contants/role";
 import { DrawerItem } from "@/types";
 
 //icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
-import KeyIcon from "@mui/icons-material/Key";
-import GroupIcon from "@mui/icons-material/Group";
-import PersonSearchIcon from "@mui/icons-material/PersonSearch";
-import BloodtypeIcon from "@mui/icons-material/Bloodtype";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
+import SplitscreenIcon from "@mui/icons-material/Splitscreen";
+import ArticleIcon from "@mui/icons-material/Article";
 
 export const drawerItems = (): DrawerItem[] => {
   const defaultMenus = [
@@ -20,31 +20,31 @@ export const drawerItems = (): DrawerItem[] => {
     {
       title: "Skills",
       path: `/skills`,
-      icon: DashboardIcon,
+      icon: BusinessCenterIcon,
     },
 
     {
       title: "Educations",
       path: `/educations`,
-      icon: DashboardIcon,
+      icon: SchoolIcon,
     },
 
     {
       title: "Experiences",
       path: `/experiences`,
-      icon: DashboardIcon,
+      icon: WorkIcon,
     },
 
     {
       title: "Projects",
       path: `/projects`,
-      icon: DashboardIcon,
+      icon: SplitscreenIcon,
     },
 
     {
       title: "Blogs",
       path: `/blogs`,
-      icon: DashboardIcon,
+      icon: ArticleIcon,
     },
 
     {

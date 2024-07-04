@@ -58,8 +58,8 @@ const ProfilePage = () => {
               )}
             </Box>
             <Box>
-              <h1 className="text-xl mt-3">
-                <span className="text-2xl font-semibold ">Email:</span>
+              <h1 className="text-2xl mt-3">
+                <span className="text-2xl font-semibold ">Email: </span>
                 {data.email}
               </h1>
             </Box>
