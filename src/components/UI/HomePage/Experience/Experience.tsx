@@ -18,6 +18,7 @@ const Experience = () => {
         <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
           Experience
         </h2>
+        <hr className="text-white border-b-2 mt-2 w-16 mx-auto"></hr>
       </div>
 
       <Grid container spacing={2}>

@@ -53,6 +53,7 @@ const Projects = () => {
         <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
           Best Projects
         </h2>
+        <hr className="text-white border-b-2 mt-2 w-16 mx-auto"></hr>
       </div>
       <Slider {...settings}>
         {data?.data?.map((project: any) => (

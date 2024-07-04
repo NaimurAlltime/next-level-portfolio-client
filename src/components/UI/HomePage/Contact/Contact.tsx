@@ -40,6 +40,7 @@ const Contact = () => {
   return (
     <div className="w-full px-8 md:px-10 lg:px-32 gap-10 lg:gap-20 pt-20 md:pt-0 lg:py-20 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#061130]">
       <h2 className="text-3xl text-center font-bold text-white">Contact Me</h2>
+      <hr className="text-white border-b-2 mt-2 w-16 mx-auto"></hr>
       <div
         data-aos="zoom-in-down"
         data-aos-offset="200"

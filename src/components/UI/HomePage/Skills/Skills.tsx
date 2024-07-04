@@ -12,11 +12,12 @@ const Skills = () => {
 
   return (
     <div className="w-full flex flex-col py-20 px-0 lg:px-5 lg:py-20 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#05174e] to-[#030a1c]">
-      <h4 className="text-3xl font-bold text-white mb-10 text-center">
+      <h4 className="text-3xl font-bold text-white text-center">
         Technical Skills
       </h4>
+      <hr className="text-white border-b-2 mt-2 w-16 mx-auto"></hr>
 
-      <div className="w-full flex flex-wrap gap-10 items-center justify-center">
+      <div className="w-full flex flex-wrap gap-10 items-center justify-center mt-12">
         {data?.data?.map((skill: any) => (
           <div
             data-aos="zoom-in-down"
@@ -56,11 +57,12 @@ const Skills = () => {
         ))}
       </div>
       <div className="mt-20 ">
-        <h4 className="text-3xl font-bold text-white mb-14 text-center">
+        <h4 className="text-3xl font-bold text-white text-center">
           Soft Skills
         </h4>
+        <hr className="text-white border-b-2 mt-2 w-16 mx-auto"></hr>
 
-        <div className="flex flex-col md:flex-row gap-16 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-16 items-center justify-center mt-12">
           <div className="flex flex-col bg-[#224cff10] p-6 rounded-xl shadow-xl hover:scale-125 ease-in-out duration-500 mb-10 md:mb-0">
             {softskills.slice(0, 5).map((s, index) => (
               <div key={index + s} className="flex items-center gap-3 p-4">

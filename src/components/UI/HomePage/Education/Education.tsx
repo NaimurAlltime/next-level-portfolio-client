@@ -23,6 +23,7 @@ const Education = () => {
         <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
           Education
         </h2>
+        <hr className="text-white border-b-2 mt-2 w-16 mx-auto"></hr>
       </div>
       <VerticalTimeline animate={true}>
         {data?.data.map((education: IEducation) => (
