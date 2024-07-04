@@ -13,43 +13,43 @@ export const drawerItems = (): DrawerItem[] => {
   const defaultMenus = [
     {
       title: "Dashboard",
-      path: `/`,
+      path: `/dashboard`,
       icon: DashboardIcon,
     },
 
     {
       title: "Skills",
-      path: `/skills`,
+      path: `/dashboard/skills`,
       icon: BusinessCenterIcon,
     },
 
     {
       title: "Educations",
-      path: `/educations`,
+      path: `/dashboard/educations`,
       icon: SchoolIcon,
     },
 
     {
       title: "Experiences",
-      path: `/experiences`,
+      path: `/dashboard/experiences`,
       icon: WorkIcon,
     },
 
     {
       title: "Projects",
-      path: `/projects`,
+      path: `/dashboard/projects`,
       icon: SplitscreenIcon,
     },
 
     {
       title: "Blogs",
-      path: `/blogs`,
+      path: `/dashboard/blogs`,
       icon: ArticleIcon,
     },
 
     {
       title: "My Profile",
-      path: "/profile",
+      path: "/dashboard/profile",
       icon: PersonIcon,
     },
   ];

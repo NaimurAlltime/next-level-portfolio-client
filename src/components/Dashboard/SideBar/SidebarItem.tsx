@@ -1,3 +1,4 @@
+"use client"; // Ensure this component is rendered on the client side
 import Link from "next/link";
 import {
   ListItem,
@@ -5,8 +6,6 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import MailIcon from "@mui/icons-material/Mail";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { DrawerItem } from "@/types";
 import { usePathname } from "next/navigation";
 
@@ -14,24 +13,33 @@ type IProps = {
   item: DrawerItem;
 };
 
+const normalizePath = (path: string) => {
+  return path.replace(/^\/+|\/+$/g, ""); // Remove leading and trailing slashes
+};
+
 const SidebarItem = ({ item }: IProps) => {
-  const linkPath = `/dashboard/${item.path}`;
-  const pathname = usePathname();
-  //   console.log(pathname);
+  const linkPath = normalizePath(item.path); // Use item.path directly
+  const pathname = normalizePath(usePathname());
+
+  console.log("Current pathname:", pathname);
+  console.log("Link path:", linkPath);
+
+  const isActive = pathname === linkPath;
+  console.log("Is active:", isActive);
+
   return (
-    <Link href={linkPath}>
+    <Link href={item.path} passHref>
       <ListItem
         disablePadding
         sx={{
-          ...(pathname === linkPath
-            ? {
-                borderRight: "3px solid #1586FD",
-                "& svg": {
-                  color: "#1586FD",
-                },
-              }
-            : {}),
           mb: 1,
+          ...(isActive && {
+            borderRight: "3px solid #1586FD",
+            backgroundColor: "#e0f7fa",
+            "& svg": {
+              color: "#1586FD",
+            },
+          }),
         }}
       >
         <ListItemButton>
