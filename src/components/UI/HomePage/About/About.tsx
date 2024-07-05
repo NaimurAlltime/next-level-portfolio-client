@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row px-8 md:px-10 gap-10 lg:gap-20 lg:px-5 2xl:px-32 py-10 lg:py-24 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]">
+    <div className="w-full flex flex-col pt-24 md:pt-0 lg:flex-row px-8 md:px-10 gap-10 lg:gap-20 lg:px-5 2xl:px-32 py-10 lg:py-24 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]">
       <div className="w-full md:h-[290px] lg:w-1/3 flex flex-col items-center border border-gray-500 dark:bg-transparent rounded-md">
         <Image
           width={400}

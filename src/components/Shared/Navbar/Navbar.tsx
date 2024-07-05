@@ -1,6 +1,5 @@
 "use client";
 
-import assets from "@/assets";
 import {
   Box,
   Button,
@@ -17,14 +16,13 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useMediaQuery, useTheme } from "@mui/material";
-import { getUserInfo, isLoggedIn, removeUser } from "@/services/auth.services";
-import { logout } from "@/services/actions/logout";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const pathname = usePathname();
 
   const [isTop, setIsTop] = useState(true);
   const controlNavbar = () => {
@@ -45,16 +43,18 @@ const Navbar: React.FC = () => {
     setAnchorEl(null);
   };
 
+  const isActiveLink = (path: string) => pathname === path;
+
   return (
     <div
-      className={`w-full fixed top-0 z-50   ${
+      className={`w-full fixed top-0 z-50 ${
         isTop
           ? " bg-opacity-10 "
           : "bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e] shadow-md"
       }`}
     >
       <div className="px-3 md:px-12 lg:px-32">
-        <Grid sx={{}} container py={2} alignItems="center">
+        <Grid container py={2} alignItems="center">
           <Grid item xs={6} md={4} lg={3}>
             <div className="flex items-center">
               <Link href="/" className="flex justify-center items-center">
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
                   height={25}
                   className="text-white w-[45px] h-[50px]"
                 />
-                <h1 className="text-xl text-blue-500 font-sans lg:text-2xl ms-2 font-semibold">
+                <h1 className="text-xl text-white font-sans lg:text-3xl ms-2 font-semibold">
                   Naimur Rahman
                 </h1>
               </Link>
@@ -90,50 +90,54 @@ const Navbar: React.FC = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleMenuClose}
               >
-                <MenuItem component={Link} href="/" onClick={handleMenuClose}>
+                <MenuItem
+                  component={Link}
+                  href="/"
+                  onClick={handleMenuClose}
+                  selected={isActiveLink("/")}
+                >
                   Home
                 </MenuItem>
-
                 <MenuItem
                   component={Link}
                   href="/about-us"
                   onClick={handleMenuClose}
+                  selected={isActiveLink("/about-us")}
                 >
                   About Us
                 </MenuItem>
-
                 <MenuItem
                   component={Link}
                   href="/skills"
                   onClick={handleMenuClose}
+                  selected={isActiveLink("/skills")}
                 >
                   Skills
                 </MenuItem>
-
                 <MenuItem
                   component={Link}
                   href="/projects"
                   onClick={handleMenuClose}
+                  selected={isActiveLink("/projects")}
                 >
                   Projects
                 </MenuItem>
-
                 <MenuItem
                   component={Link}
                   href="/contacts"
                   onClick={handleMenuClose}
+                  selected={isActiveLink("/contacts")}
                 >
                   Contacts
                 </MenuItem>
-
                 <MenuItem
                   component={Link}
                   href="/blogs"
                   onClick={handleMenuClose}
+                  selected={isActiveLink("/blogs")}
                 >
                   Blogs
                 </MenuItem>
-
                 <MenuItem onClick={handleMenuClose}>
                   <Button component={Link} href="/login">
                     Hire Me
@@ -162,49 +166,71 @@ const Navbar: React.FC = () => {
                   <Typography
                     component={Link}
                     href="/"
-                    sx={{ textDecoration: "none", color: "inherit" }}
+                    sx={{
+                      textDecoration: "none",
+                      color: isActiveLink("/") ? "inherit" : "inherit",
+                      fontWeight: isActiveLink("/") ? "normal" : "normal",
+                    }}
                   >
                     Home
                   </Typography>
                   <Typography
                     component={Link}
                     href="/about-us"
-                    sx={{ textDecoration: "none", color: "inherit" }}
+                    sx={{
+                      textDecoration: "none",
+                      color: isActiveLink("/about-us") ? "white" : "inherit",
+                      fontWeight: isActiveLink("/about-us") ? "bold" : "normal",
+                    }}
                   >
                     About Us
                   </Typography>
                   <Typography
                     component={Link}
                     href="/skills"
-                    sx={{ textDecoration: "none", color: "inherit" }}
+                    sx={{
+                      textDecoration: "none",
+                      color: isActiveLink("/skills") ? "white" : "inherit",
+                      fontWeight: isActiveLink("/skills") ? "bold" : "normal",
+                    }}
                   >
                     Skills
                   </Typography>
                   <Typography
                     component={Link}
                     href="/projects"
-                    sx={{ textDecoration: "none", color: "inherit" }}
+                    sx={{
+                      textDecoration: "none",
+                      color: isActiveLink("/projects") ? "white" : "inherit",
+                      fontWeight: isActiveLink("/projects") ? "bold" : "normal",
+                    }}
                   >
                     Projects
                   </Typography>
-
                   <Typography
                     component={Link}
                     href="/contacts"
-                    sx={{ textDecoration: "none", color: "inherit" }}
+                    sx={{
+                      textDecoration: "none",
+                      color: isActiveLink("/contacts") ? "white" : "inherit",
+                      fontWeight: isActiveLink("/contacts") ? "bold" : "normal",
+                    }}
                   >
                     Contacts
                   </Typography>
                   <Typography
                     component={Link}
                     href="/blogs"
-                    sx={{ textDecoration: "none", color: "inherit" }}
+                    sx={{
+                      textDecoration: "none",
+                      color: isActiveLink("/blogs") ? "white" : "inherit",
+                      fontWeight: isActiveLink("/blogs") ? "bold" : "normal",
+                    }}
                   >
                     Blogs
                   </Typography>
                 </Stack>
               </Grid>
-
               <Grid item>
                 <Button component={Link} href="/login">
                   Hire Me
