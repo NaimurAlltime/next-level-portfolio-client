@@ -21,11 +21,7 @@ const SidebarItem = ({ item }: IProps) => {
   const linkPath = normalizePath(item.path); // Use item.path directly
   const pathname = normalizePath(usePathname());
 
-  console.log("Current pathname:", pathname);
-  console.log("Link path:", linkPath);
-
   const isActive = pathname === linkPath;
-  console.log("Is active:", isActive);
 
   return (
     <Link href={item.path} passHref>
