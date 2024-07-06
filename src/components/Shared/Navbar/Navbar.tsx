@@ -139,9 +139,9 @@ const Navbar: React.FC = () => {
                   Blogs
                 </MenuItem>
                 <MenuItem onClick={handleMenuClose}>
-                  <Button component={Link} href="/login">
-                    Hire Me
-                  </Button>
+                  <button className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 text-white text-lg py-2 px-5 font-semibold rounded-md mt-3">
+                    <Link href="/contacts">Hire Me</Link>
+                  </button>
                 </MenuItem>
               </Menu>
             </Grid>
@@ -232,9 +232,9 @@ const Navbar: React.FC = () => {
                 </Stack>
               </Grid>
               <Grid item>
-                <Button component={Link} href="/login">
-                  Hire Me
-                </Button>
+                <button className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 text-white text-lg py-2 px-5 font-semibold rounded-md mt-3">
+                  <Link href="/contacts">Hire Me</Link>
+                </button>
               </Grid>
             </Grid>
           )}

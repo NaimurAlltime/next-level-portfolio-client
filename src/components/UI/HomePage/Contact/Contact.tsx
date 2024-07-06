@@ -84,7 +84,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="bg-orange-500 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md"
+              className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 py-3 px-8 rounded-md outline-none w-fit text-white font-bold shadow-md"
             >
               Send
             </button>

@@ -3,7 +3,8 @@
 import { BiDownload } from "react-icons/bi";
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
-// import resumePdf from "/Resume of Naimur Rahman.pdf";
+import Link from "next/link";
+// import resumePdf from "/Full Stack Developer Resume of Naimur Rahamn.pdf";
 
 const Banner = () => {
   return (
@@ -29,10 +30,8 @@ const Banner = () => {
               loop
               strings={[
                 "Full Stack Developer",
-                "Frontend Developer ",
-                "React Js Developer",
                 "MERN Stack Developer",
-                "JavaScript Developer",
+                "PERN Stack Developer",
               ]}
             />
           </div>
@@ -40,17 +39,31 @@ const Banner = () => {
 
         <p className="text-md text-gray-100 mt-5 2xl:mt-7">
           Full-Stack Web Developer with ability to learn and collaborate in
-          rapidly changing environments and compositions.
+          rapidly changing
+          <br />
+          environments and compositions.
         </p>
 
         <div className="mt-10 flex gap-10">
-          <a
-            className="bg-orange-700 flex items-center text-lg text-white font-semibold rounded-md py-3 px-5"
-            // href={resumePdf}
+          {/* <Link
+            className="border border-orange-500 flex items-center text-lg text-white font-semibold rounded-md px-5"
+            href="/Full Stack Developer Resume of Naimur Rahamn.pdf"
             download
           >
             Download Resume <BiDownload className="ml-2" />
-          </a>
+          </Link> */}
+          <button className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 text-white text-lg py-3.5 px-5 font-semibold rounded-md mt-3">
+            <Link
+              className=" flex items-center"
+              href="/Full Stack Developer Resume of Naimur Rahamn.pdf"
+              download
+            >
+              Download Resume <BiDownload className="ml-2" />
+            </Link>
+          </button>
+          <button className="border border-orange-500 text-orange-500 text-lg py-3 px-5 font-semibold rounded-md mt-3">
+            <Link href="/projects">View Projects</Link>
+          </button>
         </div>
       </div>
 

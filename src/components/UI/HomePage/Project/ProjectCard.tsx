@@ -32,7 +32,7 @@ const ProjectCard = ({ project }: any) => {
         </div>
         <div className="mt-auto bg-[#e9e9e9] w-full text-end rounded-b-lg">
           <Link href={`/projects/${_id}`}>
-            <button className="text-[20px] font-medium text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg text-sm px-5 py-2.5 text-center mr-2 mt-2 mb-2">
+            <button className="text-[20px] font-medium text-white bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg text-sm px-5 py-2.5 text-center mr-2 mt-2 mb-2">
               Details
             </button>
           </Link>
