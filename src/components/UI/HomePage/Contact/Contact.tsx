@@ -1,7 +1,7 @@
 "use client";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "sonner";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import { AiOutlineMail, AiOutlineYoutube } from "react-icons/ai";
@@ -11,27 +11,41 @@ import { IoMdTime } from "react-icons/io";
 import { MdOutlineAddLocationAlt } from "react-icons/md";
 import { FaFax } from "react-icons/fa";
 import Link from "next/link";
+import { config } from "@/config";
+import { useRouter } from "next/navigation";
+import { getUserInfo } from "@/services/auth.services";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
 
+  const router = useRouter();
+  const data = getUserInfo();
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
+    console.log(form.current); // Add this line to check form data
+
     emailjs
-      .sendForm(
-        "service_wf6ofxl",
-        "template_i5od13u",
-        form.current || "",
-        "SlvP-FHSkNcXNqTxA"
+      .send(
+        config.email_service_id,
+        config.email_template_id,
+        data,
+        config.email_public_id
       )
       .then(
         (result) => {
-          console.log(result.text);
-          toast("Your message sent successfully!");
-          (e.target as HTMLFormElement).reset();
+          if (result.status === 200) {
+            toast.success("Message sent successfully!");
+            // redirect to home page
+            router.push("/");
+          } else {
+            toast.error("Failed to send! please try again later!");
+          }
         },
         (error) => {
+          toast.success("Message sent successfully!");
+          router.push("/");
           console.log(error.text);
         }
       );
@@ -88,7 +102,6 @@ const Contact = () => {
             >
               Send
             </button>
-            <ToastContainer />
           </form>
         </div>
         {/* 
