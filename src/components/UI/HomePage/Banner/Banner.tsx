@@ -4,7 +4,10 @@ import { BiDownload } from "react-icons/bi";
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
 import Link from "next/link";
-// import resumePdf from "/Full Stack Developer Resume of Naimur Rahamn.pdf";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({ duration: 2000 });
 
 const Banner = () => {
   return (

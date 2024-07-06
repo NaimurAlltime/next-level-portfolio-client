@@ -14,7 +14,13 @@ const Experience = () => {
       className="timeline py-14 px-3 md:px-60 lg:px-80 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#030a1c] to-[#05174e]"
       style={{ width: "100%" }}
     >
-      <div className="max-w-2xl text-center mx-auto mb-10 lg:mb-14">
+      <div
+        className="max-w-2xl text-center mx-auto mb-10 lg:mb-14"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+      >
         <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
           Experience
         </h2>

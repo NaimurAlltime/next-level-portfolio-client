@@ -11,10 +11,6 @@ import Education from "@/components/UI/HomePage/Education/Education";
 import Experience from "@/components/UI/HomePage/Experience/Experience";
 
 const HomePage = () => {
-  // useEffect(() => {
-  //   AOS.init({ duration: 1000 });
-  // }, []);
-
   return (
     <>
       <Banner />

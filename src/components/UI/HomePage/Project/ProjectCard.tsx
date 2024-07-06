@@ -8,9 +8,8 @@ const ProjectCard = ({ project }: any) => {
   return (
     <div className="lg:p-0 p-2 mx-3">
       {/* Card */}
-      <a
+      <div
         className="group flex flex-col border shadow-sm rounded-xl hover:shadow-lg transition h-[400px] w-full"
-        href="#"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay="50"
@@ -37,7 +36,7 @@ const ProjectCard = ({ project }: any) => {
             </button>
           </Link>
         </div>
-      </a>
+      </div>
       {/* End Card */}
     </div>
   );
