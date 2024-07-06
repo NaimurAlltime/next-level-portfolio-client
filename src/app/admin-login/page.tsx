@@ -36,7 +36,7 @@ const LoginPage = () => {
       } else {
         // Handle the case where res.data or res.data.token is undefined
         const errorMsg = res?.message || "An error occurred during login.";
-        setError(errorMsg);
+        setError("Invalid email or password try again!");
       }
     } catch (err: any) {
       setError(err.message || "Internal Server Error");

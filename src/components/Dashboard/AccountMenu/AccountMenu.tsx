@@ -61,16 +61,10 @@ export default function AccountMenu({ color }: { color: string }) {
   const open = Boolean(anchorEl);
   const router = useRouter();
 
-  const [userRole, setUserRole] = React.useState("");
-  React.useEffect(() => {
-    const { role } = getUserInfo() as any;
-    setUserRole(role);
-  }, []);
-
   const handleLogOut = () => {
     removeUser();
     logout();
-    router.refresh();
+    router.push("/");
   };
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -87,7 +81,7 @@ export default function AccountMenu({ color }: { color: string }) {
   };
 
   const openDashboard = () => {
-    router.push(`/dashboard/${userRole}`);
+    router.push("/dashboard");
   };
 
   const openProfile = () => {
