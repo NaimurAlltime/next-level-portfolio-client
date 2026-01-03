@@ -3,6 +3,7 @@ const assets = {
     // images will go here
 
     logo: require("./logo/logo.png"),
+    profile2: require("./profile2.png"),
     dafult_profile: require("./image/user_placeholder.png"),
     logo_white: require("./logo/logo-white.png"),
     logo_small: require("./logo/logo-small.png"),

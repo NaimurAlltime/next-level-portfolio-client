@@ -25,15 +25,27 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   const [isTop, setIsTop] = useState(true);
-  const controlNavbar = () => {
-    if (window.scrollY > 50) {
-      setIsTop(false);
-    } else {
-      setIsTop(true);
-    }
-  };
+  
+    // ⬇️ ONLY SAFE CHANGE (logic same)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
 
-  useEffect(() => window.addEventListener("scroll", controlNavbar), []);
+    const controlNavbar = () => {
+      if (window.scrollY > 50) {
+        setIsTop(false);
+      } else {
+        setIsTop(true);
+      }
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
+ 
+    
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);

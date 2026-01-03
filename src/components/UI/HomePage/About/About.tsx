@@ -3,6 +3,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { MdOutlineAlternateEmail, MdWifiCalling2 } from "react-icons/md";
 
 import Image from "next/image";
+import assets from "@/assets";
 
 const About = () => {
   return (
@@ -11,8 +12,8 @@ const About = () => {
         <Image
           width={400}
           height={400}
-          src="/assets/profile1.png"
-          className="h-[290px] p-1 rounded-md ease-in-out duration-300 hover:scale-125"
+          src={assets.images.profile2}
+          className="h-[290px] object-contain p-1 rounded-md ease-in-out duration-300 hover:scale-125"
           alt="about img"
         />
       </div>
@@ -48,7 +49,7 @@ const About = () => {
             <BsWhatsapp size={14} /> +88 01983 835309
           </a>
           <p className="flex gap-3 items-center justify-center rounded-full shadow-lg py-2 px-4 bg-[#030a1c] text-white cursor-pointer">
-            <MdWifiCalling2 size={14} /> +88 01988 135959
+            <MdWifiCalling2 size={14} /> +88 01560 005802
           </p>
         </div>
       </div>

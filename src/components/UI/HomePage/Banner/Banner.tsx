@@ -6,10 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import assets from "@/assets";
+import { useEffect } from "react";
 
-AOS.init({ duration: 2000 });
 
 const Banner = () => {
+    useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="w-full flex items-center flex-col lg:flex-row md:px-10 gap-3 2xl:gap-20 px-5 lg:px-12 2xl:px-32 py-20 lg:py-24 bg-gradient-to-tr from-[#0235a3] via-[#030a1c] to-[#05174e]">
       <div
@@ -58,7 +66,7 @@ const Banner = () => {
           <button className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 text-white text-lg py-3.5 px-5 font-semibold rounded-md mt-3">
             <Link
               className=" flex items-center"
-              href="/Full Stack Developer Resume of Naimur Rahamn.pdf"
+              href="/full-stack-developer-resume-of-naimur-rahamn-updated-new-experience-1.pdf"
               download
             >
               Download Resume <BiDownload className="ml-2" />
@@ -74,9 +82,9 @@ const Banner = () => {
         <div className="w-[300px] h-[290px] md:w-[400px] md:h-[400px] 2xl:w-[500px] 2xl:h-[500px]  border rounded-full border-gray-200 relative mt-0  md:mt-20 lg:mt-12 flex items-center justify-center">
           <Image
             width={500}
-            height={500}
-            src="/assets/profile1.png"
-            className="w-auto p-10 h-full absolute -top-5 md:-top-10"
+            height={700}
+            src={assets.images.profile2}
+            className="w-auto p-10 h-[570px] absolute -top-5 md:-top-10"
             data-aos="fade-down"
             data-aos-offset="200"
             data-aos-delay="50"
