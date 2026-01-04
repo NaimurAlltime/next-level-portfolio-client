@@ -84,7 +84,7 @@ const Banner = () => {
             width={500}
             height={700}
             src={assets.images.profile2}
-            className="w-auto p-10 h-[570px] absolute -top-5 md:-top-10"
+            className="w-auto p-10 h-[345px] md:h-[570px] absolute -top-5 md:-top-10"
             data-aos="fade-down"
             data-aos-offset="200"
             data-aos-delay="50"
